@@ -68,7 +68,11 @@ public:
 			y++;
 		}
 		gotoxy(x, y);
-		cout << ":)" << endl;
+		cout << ":)";
+	}
+	void borrar() {
+		gotoxy(x, y);
+		cout << "  ";
 	}
 };
 
@@ -79,7 +83,8 @@ int main() {
 	bool repetir = true;
 	while (repetir) {
 		Caracter.mover();
-		system("cls");
+		Sleep(60);
+		Caracter.borrar();
 	}
 	return 0;
 }
